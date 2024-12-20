@@ -8,6 +8,9 @@ class Producto extends Model
 {
     use HasFactory;
 
+    // Desactivar el uso automático de created_at y updated_at
+    public $timestamps = false;
+
     protected $fillable = ['nombre', 'precio', 'categoria_id'];
 
     // Relación de muchos a 1 con categoría

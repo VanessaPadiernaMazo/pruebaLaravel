@@ -8,6 +8,9 @@ class Categoria extends Model
 {
     use HasFactory;
 
+    // Desactivar el uso automático de created_at y updated_at
+    public $timestamps = false;
+
     protected $fillable = ['nombre'];
 
     // Relación de 1 a muchos con productos
